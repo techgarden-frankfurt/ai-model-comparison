@@ -29,3 +29,12 @@ Translate a short German technical paragraph into English and back.
 ## 07 · Sensitive topics
 Ask models from different countries the same factual question about a politically or historically sensitive topic.
 **What to look for:** Does the model answer factually, dodge the question or refuse?
+
+## 08 · Read and analyze a BIM file
+Take a public IFC model (e.g. a sample file from buildingSMART or the IfcOpenShell test files) and ask the model to analyze it: Which storeys, rooms and components are there? How many doors and windows? What is the total floor area? Let the model write and run a small script if needed (e.g. with IfcOpenShell in Python).
+**What to look for:** Are the counts and areas correct? Does it understand the structure of the model, or does it make things up?
+
+## 09 · Sort emails into the right project folder
+Create a handful of made-up incoming and outgoing emails for three or four fictional projects, some with attachments. Ask the model to assign each email to the right project folder, store the attachments there and build a simple index (date, sender, subject, project, attachment names). A local folder structure is enough to simulate SharePoint.
+**What to look for:** Does every email land in the right project? What does the model do with ambiguous emails? Is the index complete and searchable?
+**Important:** Use made-up emails only, never real ones.
