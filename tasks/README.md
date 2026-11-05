@@ -39,3 +39,36 @@ Take a public IFC model (e.g. a sample file from buildingSMART or the IfcOpenShe
 Create a handful of made-up incoming and outgoing emails for three or four fictional projects, some with attachments. Ask the model to assign each email to the right project folder, store the attachments there and build a simple index (date, sender, subject, project, attachment names). A local folder structure is enough to simulate SharePoint.
 **What to look for:** Does every email land in the right project? What does the model do with ambiguous emails? Is the index complete and searchable?
 **Important:** Use made-up emails only, never real ones.
+
+## 10 · Automated model checking with AI (BIM / IDS)
+Build a small, repeatable workflow that checks an IFC model against rules automatically, with an AI model helping at each step. Then compare which AI model helps best. The real task is to phrase the requirements clearly enough that an AI can turn them into a working check.
+
+**Input:** The public IFC model "Einfamilienhaus" from the [Bundesingenieurkammer](https://bingk.de/projektbeispiele-bim/) (please link to it, don't add the file to this repository), and these example rules:
+1. Every door has a fire rating (`Pset_DoorCommon.FireRating`)
+2. Every wall states whether it is external (`Pset_WallCommon.IsExternal`)
+3. Every window has an overall width and height
+4. Every room (`IfcSpace`) has a name
+5. Every building element is assigned to a storey
+
+**Note:** This model uses the IFC2X3 schema and contains no rooms, so rule 4 has nothing to check. In IDS, an entity matches only that exact class, not its subclasses: `IFCWALL` doesn't include `IFCWALLSTANDARDCASE`, for example.
+
+**Steps:**
+1. Phrase the rules clearly: what, which elements, which property.
+2. Let the AI write an IDS file (buildingSMART Information Delivery Specification).
+3. Validate the IDS file against the IDS schema.
+4. Run the check with IfcOpenShell's ifctester.
+5. Let the AI summarize the report: which rules fail, how often, and for which elements.
+6. Repeat with another AI model and compare.
+
+**What to look for:** Is the IDS valid on the first try? Are the IFC property set names correct or invented? Does the summary match the real report? Could you rerun the workflow on a new model?
+
+**Tools:** Python, ifcopenshell and ifctester (`pip install ifcopenshell ifctester`). Optional: [Open IFC Viewer](https://openifcviewer.com), which has IDS validation and a built-in MCP server.
+
+**Result:** Put the IDS file, check report and notes in `results/`, and add one row per AI model to `results/results.csv`.
+
+### Data protection before you use this at work
+- In this repository: public models only.
+- Real project models often contain confidential client data, addresses, and names of people and companies in properties, and they are often under NDA. Check what is in a model before sending any part of it to an AI service.
+- The check itself (ifctester) runs locally. Only the rules and the report need to go to the AI. Remove names and project details from the report first if needed.
+- If an AI service is used with real data, check where it is hosted (EU?), whether there is a data processing agreement (DPA / AVV under GDPR), whether data is used for training, and how long it is stored.
+- Alternative: an open model running locally or on the company's own server, so no model data leaves the company.
