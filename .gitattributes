@@ -1,0 +1,4 @@
+# Keep line endings consistent in the repository (also for contributions from Windows)
+* text=auto
+*.csv text eol=lf
+*.pdf binary

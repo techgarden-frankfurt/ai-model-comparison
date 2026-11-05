@@ -3,3 +3,32 @@
 __pycache__/
 .venv/
 .DS_Store
+
+# Secrets
+.env.*
+!.env.example
+*.pem
+secrets.*
+credentials.json
+
+# Model weights (local models, very large)
+*.gguf
+*.safetensors
+*.ckpt
+*.pt
+*.bin
+models/
+
+# Python / Notebooks
+*.pyc
+venv/
+.ipynb_checkpoints/
+
+# Node
+node_modules/
+
+# Editor / System
+.idea/
+.vscode/
+Thumbs.db
+*.log

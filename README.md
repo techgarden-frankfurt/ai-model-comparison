@@ -1,72 +1,60 @@
-# KI-Modelle im Vergleich · TechGarden Frankfurt
+# Comparing AI Models · TechGarden Frankfurt
 
 **Build. Code. Ship.**
 
-Was können aktuelle KI-Modelle wirklich? Hier sammeln wir bei den TechGarden-Treffen in Frankfurt Tests und Ergebnisse: offene und geschlossene, europäische und nicht-europäische Modelle, an echten Aufgaben.
+What can current AI models really do? At the TechGarden meetups in Frankfurt we collect tests and results here: open and closed, European and non-European models, on real tasks.
 
-*English below.*
+## What this is about
 
-## Worum es geht
+There are plenty of claims about AI models. We try them ourselves and record what we see:
 
-Über KI-Modelle wird viel behauptet. Wir probieren selbst aus und halten fest, was wir sehen:
+- **Quality:** Is the answer correct? Is it usable?
+- **Speed:** How long does the answer take?
+- **Cost:** What does a request cost?
+- **Data:** Where does the model run, and where does the data go?
 
-- **Qualität:** Stimmt die Antwort? Ist sie brauchbar?
-- **Tempo:** Wie lange dauert es bis zur Antwort?
-- **Kosten:** Was kostet eine Anfrage?
-- **Daten:** Wo läuft das Modell, und wohin gehen die Daten?
+## The models
 
-## Die Modelle
-
-|  | Offen (Gewichte herunterladbar) | Geschlossen (nur über Anbieter) |
+|  | Open (downloadable weights) | Closed (provider access only) |
 |---|---|---|
-| **Europäisch** | z. B. Mistral (offene Modelle) | z. B. Mistral (große Modelle), Aleph Alpha |
-| **Nicht-europäisch** | z. B. Llama, Qwen, DeepSeek, GLM | z. B. GPT, Claude, Gemini |
+| **European** | e.g. Mistral (open models) | e.g. Mistral (large models), Aleph Alpha |
+| **Non-European** | e.g. Llama, Qwen, DeepSeek, GLM | e.g. GPT, Claude, Gemini |
 
-Die Liste ist ein Startpunkt. Jedes Modell, das jemand testen möchte, ist willkommen.
+This list is a starting point. Any model someone wants to test is welcome.
 
-## So machst du mit
+## How to contribute
 
-1. Such dir eine Aufgabe aus [`aufgaben/`](aufgaben/) oder bring eine eigene mit.
-2. Stell dieselbe Aufgabe an zwei oder mehr Modelle.
-3. Trag deine Ergebnisse in [`ergebnisse/ergebnisse.csv`](ergebnisse/ergebnisse.csv) ein, eine Zeile pro Modell und Aufgabe.
-4. Längere Antworten, Skripte oder Notizen legst du als eigene Datei in `ergebnisse/` ab, zum Beispiel `ergebnisse/2026-11-12_dein-name_aufgabe-01.md`.
-5. Pull Request stellen, fertig.
+1. Pick a task from [`tasks/`](tasks/) or bring your own.
+2. Give the same task to two or more models.
+3. Add your results to [`results/results.csv`](results/results.csv), one row per model and task.
+4. Put longer answers, scripts or notes in their own file in `results/`, for example `results/2026-11-12_your-name_task-01.md`.
+5. Open a pull request, and you're done.
 
-Ausprobieren kannst du die Modelle im Browser-Chat, über eine API oder lokal, zum Beispiel mit [Ollama](https://ollama.com) oder [LM Studio](https://lmstudio.ai).
+You can try the models in a browser chat, through an API or locally, for example with [Ollama](https://ollama.com) or [LM Studio](https://lmstudio.ai).
 
-## Spielregeln
+## Ground rules
 
-- **Nur öffentliche Daten.** Keine vertraulichen Firmendaten, keine personenbezogenen Daten.
-- **Keine API-Schlüssel oder Passwörter** im Repository, auch nicht in Skripten.
-- **Genau notieren:** Modellname und Version, Datum, Zugang (Chat, API, lokal) und wichtige Einstellungen. Ohne diese Angaben lassen sich Ergebnisse nicht vergleichen.
-- **Ehrlich bleiben:** Auch schlechte Ergebnisse und Fehler gehören in die Tabelle.
-- Jeder ist willkommen, niemand muss Profi sein.
+- **Public data only.** No confidential company data, no personal data.
+- **No API keys or passwords** in the repository, not even in scripts.
+- **Be precise:** Note the model name and version, date, access method (chat, API, local) and any important settings. Without these, results can't be compared.
+- **Be honest:** Bad results and errors belong in the table too.
+- Everyone is welcome, nobody has to be a pro.
 
-## Ordner
+## Folders
 
-| Ordner | Inhalt |
+| Folder | Contents |
 |---|---|
-| `aufgaben/` | Testaufgaben zum Ausprobieren |
-| `ergebnisse/` | Ergebnistabelle und ausführliche Ergebnisse |
-| `folien/` | Folien der Impulse bei den Treffen |
+| `tasks/` | Test tasks to try out |
+| `results/` | Results table and detailed results |
+| `slides/` | Slides from the talks at the meetups |
 
-## Treffen
+## Meetups
 
-TechGarden-Treffen finden alle zwei Wochen donnerstags von 18 bis 21 Uhr in Frankfurt statt.
+TechGarden meetups take place every other Thursday from 6 to 9 pm in Frankfurt.
 
-- **Erstes Treffen:** Donnerstag, 12. November 2026. Anmeldung: https://luma.com/ezi3o5tc
+- **First meetup:** Thursday, 12 November 2026. Sign up: https://luma.com/ezi3o5tc
 - Website: https://techgarden-frankfurt.de
 
-## Lizenz
+## License
 
-[MIT](LICENSE). Ergebnisse und Texte dürfen frei genutzt werden, mit Hinweis auf dieses Repository.
-
----
-
-## English
-
-**Comparing AI models · TechGarden Frankfurt.** At our meetups in Frankfurt we test open and closed, European and non-European AI models on real tasks and collect the results here: quality, speed, cost and where the data goes.
-
-**How to contribute:** pick a task from `aufgaben/` or bring your own, run it on two or more models, add one line per model and task to `ergebnisse/ergebnisse.csv`, and open a pull request. Public data only, no API keys in the repository, always note model, version, date and access method.
-
-Meetups every other Thursday, 6–9 pm, in Frankfurt. First meetup: 12 November 2026, https://luma.com/ezi3o5tc
+[MIT](LICENSE). Results and texts may be used freely, with a reference to this repository.
