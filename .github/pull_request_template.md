@@ -6,5 +6,5 @@
 
 - [ ] Public data only, no confidential company data and no personal data
 - [ ] No API keys or passwords, not even in scripts
-- [ ] Model name, version, date and access method (chat, API, local) are noted
-- [ ] One row per model and task in `results/results.csv`
+- [ ] Model name, version, harness, date and access method (chat, API, local) are noted
+- [ ] One row per model, harness and task in `results/results.csv`

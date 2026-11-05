@@ -36,7 +36,7 @@ Take a public IFC model (e.g. a sample file from buildingSMART or the IfcOpenShe
 **Sample models:** The German Federal Chamber of Engineers (Bundesingenieurkammer) offers real IFC models from five projects for download, from a single-family house to a high-rise: [BIM project examples](https://bingk.de/projektbeispiele-bim/). You can view them in a browser at [ifcviewer.de](https://www.ifcviewer.de/). Please link to the models instead of adding them to this repository.
 
 ## 09 · Automated model checking with AI (BIM / IDS)
-Build a small, repeatable workflow that checks an IFC model against rules automatically, with an AI model helping at each step. Then compare which AI model helps best. The real task is to phrase the requirements clearly enough that an AI can turn them into a working check.
+Build a small, repeatable workflow that checks an IFC model against rules automatically, with an AI model helping at each step. Then compare which AI model and harness helps best. The real task is to phrase the requirements clearly enough that an AI can turn them into a working check.
 
 **Input:** The public IFC model "Einfamilienhaus" from the [Bundesingenieurkammer](https://bingk.de/projektbeispiele-bim/) (please link to it, don't add the file to this repository), and these example rules:
 1. Every door has a fire rating (`Pset_DoorCommon.FireRating`)
@@ -48,24 +48,25 @@ Build a small, repeatable workflow that checks an IFC model against rules automa
 **Note:** This model uses the IFC2X3 schema and contains no rooms, so rule 4 has nothing to check. In IDS, an entity matches only that exact class, not its subclasses: `IFCWALL` doesn't include `IFCWALLSTANDARDCASE`, for example.
 
 **Steps:**
-1. Phrase the rules clearly: what, which elements, which property.
+1. Phrase the rules clearly: what is checked, on which elements, in which property.
 2. Let the AI write an IDS file (buildingSMART Information Delivery Specification).
 3. Validate the IDS file against the IDS schema.
-4. Run the check with IfcOpenShell's ifctester.
-5. Let the AI summarize the report: which rules fail, how often, and for which elements.
-6. Repeat with another AI model and compare.
+4. Run the check with IfcOpenShell's `ifctester`.
+5. Let the AI summarize the report: which rules fail, how often, on which elements.
+6. Repeat with another model or harness and compare.
 
-**What to look for:** Is the IDS valid on the first try? Are the IFC property set names correct or invented? Does the summary match the real report? Could you rerun the workflow on a new model?
+**What to look for:** Valid IDS on the first try, or how many corrections? Correct IFC property set names, or invented ones? Does the summary match the real report? Could you rerun the workflow on a new model without changes?
 
-**Tools:** Python, ifcopenshell and ifctester (`pip install ifcopenshell ifctester`). Optional: [Open IFC Viewer](https://openifcviewer.com), which has IDS validation and a built-in MCP server.
+**Tools:** Python with `ifcopenshell` and `ifctester` (`pip install ifcopenshell ifctester`). Optional: [Open IFC Viewer](https://openifcviewer.com), which has IDS validation and a built-in MCP server for AI agents.
 
-**Result:** Put the IDS file, check report and notes in `results/`, and add one row per AI model to `results/results.csv`.
+**Result:** Put the IDS file, check report and notes in `results/`, and add one row per model and harness to `results/results.csv`.
 
 ### Data protection before you use this at work
 - In this repository: public models only.
-- Real project models often contain confidential client data, addresses, and names of people and companies in properties, and they are often under NDA. Check what is in a model before sending any part of it to an AI service.
-- The check itself (ifctester) runs locally. Only the rules and the report need to go to the AI. Remove names and project details from the report first if needed.
-- If an AI service is used with real data, check where it is hosted (EU?), whether there is a data processing agreement (DPA / AVV under GDPR), whether data is used for training, and how long it is stored.
+- Real project models often contain confidential client data, addresses and names of people and companies in their properties, and are often under NDA. Check what is in a model before sending any part of it to an AI service.
+- The check itself (`ifctester`) runs locally. Only the rules and the report need to go to the AI. Remove names and project details from the report first if needed.
+- If an AI service is used with real data, check where it is hosted (EU?), whether there is a data processing agreement (DPA, in German AVV, under GDPR), whether inputs are used for training, and how long they are stored.
+- Enterprise harnesses such as Microsoft 365 Copilot run inside the company's own tenant under its agreements with the provider. They can help write IDS files and scripts, but the check itself still runs locally with ifctester.
 - Alternative: an open model running locally or on the company's own server, so no model data leaves the company.
 
 ## 10 · Sort emails into the right project folder
