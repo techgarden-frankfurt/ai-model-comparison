@@ -35,12 +35,7 @@ Take a public IFC model (e.g. a sample file from buildingSMART or the IfcOpenShe
 **What to look for:** Are the counts and areas correct? Does it understand the structure of the model, or does it make things up?
 **Sample models:** The German Federal Chamber of Engineers (Bundesingenieurkammer) offers real IFC models from five projects for download, from a single-family house to a high-rise: [BIM project examples](https://bingk.de/projektbeispiele-bim/). You can view them in a browser at [ifcviewer.de](https://www.ifcviewer.de/). Please link to the models instead of adding them to this repository.
 
-## 09 · Sort emails into the right project folder
-Create a handful of made-up incoming and outgoing emails for three or four fictional projects, some with attachments. Ask the model to assign each email to the right project folder, store the attachments there and build a simple index (date, sender, subject, project, attachment names). A local folder structure is enough to simulate SharePoint.
-**What to look for:** Does every email land in the right project? What does the model do with ambiguous emails? Is the index complete and searchable?
-**Important:** Use made-up emails only, never real ones.
-
-## 10 · Automated model checking with AI (BIM / IDS)
+## 09 · Automated model checking with AI (BIM / IDS)
 Build a small, repeatable workflow that checks an IFC model against rules automatically, with an AI model helping at each step. Then compare which AI model helps best. The real task is to phrase the requirements clearly enough that an AI can turn them into a working check.
 
 **Input:** The public IFC model "Einfamilienhaus" from the [Bundesingenieurkammer](https://bingk.de/projektbeispiele-bim/) (please link to it, don't add the file to this repository), and these example rules:
@@ -72,3 +67,8 @@ Build a small, repeatable workflow that checks an IFC model against rules automa
 - The check itself (ifctester) runs locally. Only the rules and the report need to go to the AI. Remove names and project details from the report first if needed.
 - If an AI service is used with real data, check where it is hosted (EU?), whether there is a data processing agreement (DPA / AVV under GDPR), whether data is used for training, and how long it is stored.
 - Alternative: an open model running locally or on the company's own server, so no model data leaves the company.
+
+## 10 · Sort emails into the right project folder
+Create a handful of made-up incoming and outgoing emails for three or four fictional projects, some with attachments. Ask the model to assign each email to the right project folder, store the attachments there and build a simple index (date, sender, subject, project, attachment names). A local folder structure is enough to simulate SharePoint.
+**What to look for:** Does every email land in the right project? What does the model do with ambiguous emails? Is the index complete and searchable?
+**Important:** Use made-up emails only, never real ones.
