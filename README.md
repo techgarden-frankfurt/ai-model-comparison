@@ -38,6 +38,16 @@ Always note the exact model name and version, and whether you used a free or pai
 
 Free tiers may use your inputs to improve the provider's models. That's another reason to use public data only.
 
+## Before you come
+
+- **Nothing is required.** A browser chat (Claude, ChatGPT, Gemini, Le Chat) is enough.
+- **Optional, for agentic coding:**
+  - [Claude Code](https://claude.com/claude-code) (needs a Claude account).
+  - [Qwen Code](https://github.com/QwenLM/qwen-code): needs Node.js 22 or later. Install it with `npm install -g @qwen-code/qwen-code@latest` and start it with `qwen`. The free Qwen sign-in tier was discontinued in April 2026, so you need either an API key from an OpenAI-compatible provider (e.g. Alibaba Cloud) or a local model via Ollama (`baseUrl` `http://localhost:11434/v1`). Set it up with `qwen auth`.
+  - [Ollama](https://ollama.com) for local models: `ollama run qwen3:8b`. The download is several gigabytes, so do it at home.
+- **For tasks 08 and 09:** Python 3 and `pip install ifcopenshell ifctester` (optional).
+- Bring your laptop and charger. Never put API keys in the repository.
+
 ## How to contribute
 
 1. Pick a task from [`tasks/`](tasks/) or bring your own.
