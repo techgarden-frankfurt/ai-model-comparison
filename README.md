@@ -63,6 +63,7 @@ In the `harness` column, note the environment you used the model in, for example
 | Folder | Contents |
 |---|---|
 | `tasks/` | Test tasks to try out |
+| `prompts/` | Starter prompts for the industry tasks |
 | `results/` | Results table and detailed results |
 | `slides/` | Slides from the talks at the meetups |
 

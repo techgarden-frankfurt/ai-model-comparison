@@ -6,6 +6,8 @@ A few starter tasks. Give each task to several models as literally as possible, 
 
 Start here if you can. Mr Hanf, founder of Hanf Advanced Fire Engineering, is on site to answer questions about these tasks. Strong solutions may lead to a follow-up.
 
+Starter prompts for these tasks are in [`prompts/`](../prompts/README.md).
+
 ### 08 · Read and analyze a BIM file
 *Industry task · Hanf Advanced Fire Engineering GmbH*
 **About BIM:** BIM (Building Information Modeling) is a way of working, not a file format. The open exchange format is IFC, and checking rules are described in IDS. There are no project files from the sponsor. We only work with public sample models, e.g. the single-family house ("Einfamilienhaus") from the [Bundesingenieurkammer](https://bingk.de/projektbeispiele-bim/). Public data only, nothing from real projects.
