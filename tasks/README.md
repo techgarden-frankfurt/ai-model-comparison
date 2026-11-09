@@ -8,12 +8,16 @@ Start here if you can. Mr Hanf, founder of Hanf Advanced Fire Engineering, is on
 
 ### 08 · Read and analyze a BIM file
 *Industry task · Hanf Advanced Fire Engineering GmbH*
+**About BIM:** BIM (Building Information Modeling) is a way of working, not a file format. The open exchange format is IFC, and checking rules are described in IDS. There are no project files from the sponsor. We only work with public sample models, e.g. the single-family house ("Einfamilienhaus") from the [Bundesingenieurkammer](https://bingk.de/projektbeispiele-bim/). Public data only, nothing from real projects.
+
 Take a public IFC model (e.g. a sample file from buildingSMART or the IfcOpenShell test files) and ask the model to analyze it: Which storeys, rooms and components are there? How many doors and windows? What is the total floor area? Let the model write and run a small script if needed (e.g. with IfcOpenShell in Python).
 **What to look for:** Are the counts and areas correct? Does it understand the structure of the model, or does it make things up?
 **Sample models:** The German Federal Chamber of Engineers (Bundesingenieurkammer) offers real IFC models from five projects for download, from a single-family house to a high-rise: [BIM project examples](https://bingk.de/projektbeispiele-bim/). You can view them in a browser at [ifcviewer.de](https://www.ifcviewer.de/). Please link to the models instead of adding them to this repository.
 
 ### 09 · Automated model checking with AI (BIM / IDS)
 *Industry task · Hanf Advanced Fire Engineering GmbH*
+**About BIM:** BIM (Building Information Modeling) is a way of working, not a file format. The open exchange format is IFC, and checking rules are described in IDS. There are no project files from the sponsor. We only work with public sample models, e.g. the single-family house ("Einfamilienhaus") from the [Bundesingenieurkammer](https://bingk.de/projektbeispiele-bim/). Public data only, nothing from real projects.
+
 Build a small, repeatable workflow that checks an IFC model against rules automatically, with an AI model helping at each step. Then compare which AI model and harness helps best. The real task is to phrase the requirements clearly enough that an AI can turn them into a working check.
 
 **Input:** The public IFC model "Einfamilienhaus" from the [Bundesingenieurkammer](https://bingk.de/projektbeispiele-bim/) (please link to it, don't add the file to this repository), and these example rules:
