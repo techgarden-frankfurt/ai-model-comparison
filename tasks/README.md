@@ -4,7 +4,7 @@ A few starter tasks. Give each task to several models as literally as possible, 
 
 ## Industry tasks · Hanf Advanced Fire Engineering GmbH
 
-Start here if you can. Mr Hanf, founder of Hanf Advanced Fire Engineering, is on site to answer questions about these tasks. Strong solutions may lead to a follow-up.
+Start here if you can. Mr. Hanf, founder of Hanf Advanced Fire Engineering, is on site to answer questions about these tasks. Strong solutions may lead to a follow-up.
 
 ### Two ways to handle confidential data
 
