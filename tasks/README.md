@@ -6,6 +6,13 @@ A few starter tasks. Give each task to several models as literally as possible, 
 
 Start here if you can. Mr Hanf, founder of Hanf Advanced Fire Engineering, is on site to answer questions about these tasks. Strong solutions may lead to a follow-up.
 
+### Two ways to handle confidential data
+
+- **Way A:** A local model processes the real data on your own hardware. This fits fuzzy work like sorting emails (task 10).
+- **Way B:** AI writes a program using sample data, and the program then runs on the real data without AI. This fits rules like IDS checks and BIM analysis (tasks 08 and 09).
+
+Note which way you took in the `notes` column of `results/results.csv`.
+
 Starter prompts for these tasks are in [`prompts/`](../prompts/README.md).
 
 ### 08 · Read and analyze a BIM file
