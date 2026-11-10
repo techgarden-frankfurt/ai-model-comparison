@@ -28,4 +28,4 @@ Run the script and show me the folder structure and the index.
 
 ## What to note in results.csv
 
-Task `10`, the model and harness, how many emails landed in the right project, and in `notes` how the model handled the ambiguous emails.
+Task `10`, the model and harness, `data_location`, how many emails landed in the right project, and in `notes` how the model handled the ambiguous emails.

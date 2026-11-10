@@ -39,4 +39,4 @@ Show me the output after each step. Check how many elements each rule actually a
 
 ## What to note in results.csv
 
-Task `09`, the model and harness, whether the IDS was valid on the first try (or how many corrections it took), and in `notes` any invented property set names or differences between the summary and the real report.
+Task `09`, the model and harness, `data_location`, whether the IDS was valid on the first try (or how many corrections it took), and in `notes` any invented property set names or differences between the summary and the real report.

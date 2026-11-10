@@ -34,4 +34,4 @@ Run the script after each step and show me the output. Don't guess: if the model
 
 ## What to note in results.csv
 
-Task `08`, the model and harness, whether the counts match the script output, and in `notes` anything the model made up or got wrong.
+Task `08`, the model and harness, `data_location`, whether the counts match the script output, and in `notes` anything the model made up or got wrong.

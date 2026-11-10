@@ -70,7 +70,7 @@ In the `data_location` column, note where your input data was processed: `local`
 
 - **Public data only.** No confidential company data, no personal data.
 - **No API keys or passwords** in the repository, not even in scripts.
-- **Be precise:** Note the model name and version, harness, date, access method (chat, API, local) and any important settings. Without these, results can't be compared.
+- **Be precise:** Note the model name and version, harness, date, access method (chat, API, local), where the data was processed (`data_location`) and any important settings. Without these, results can't be compared.
 - **Be honest:** Bad results and errors belong in the table too.
 - Everyone is welcome, nobody has to be a pro.
 
