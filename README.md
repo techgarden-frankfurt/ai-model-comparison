@@ -32,7 +32,7 @@ For the general tasks, we recommend these five setups so results stay comparable
 - **GPT** (Codex or ChatGPT)
 - **Qwen** (Qwen Code)
 - **Mistral** (Le Chat)
-- **A small local model** via Ollama (e.g. gpt-oss-20b or a small Qwen)
+- **A small local model** via Ollama (e.g. `qwen3:8b`). Larger models such as gpt-oss-20b need about 16 GB of RAM.
 
 Compare at least two setups per task.
 
