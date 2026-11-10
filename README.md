@@ -64,6 +64,8 @@ You can try the models in a browser chat, through an API or locally, for example
 
 In the `harness` column, note the environment you used the model in, for example `chat`, `api`, `claude-code`, `cursor`, `github-copilot`, `m365-copilot`, `ollama`, `lm-studio` or `openrouter`. The same model can perform differently in different harnesses, so always note both the model and the harness. Copilot, Cursor or Claude Code are harnesses, not models.
 
+In the `data_location` column, note where your input data was processed: `local`, `EU`, `US` or `other`. This is not where the model comes from (that goes in `origin`). It matters most for the industry tasks.
+
 ## Ground rules
 
 - **Public data only.** No confidential company data, no personal data.
