@@ -17,8 +17,8 @@ There are plenty of claims about AI models. We try them ourselves and record wha
 
 |  | Open (downloadable weights) | Closed (provider access only) |
 |---|---|---|
-| **European** | e.g. Mistral (open models) | e.g. Mistral (large models), Aleph Alpha |
-| **Non-European** | e.g. Llama, Qwen, DeepSeek, GLM | e.g. GPT, Claude, Gemini |
+| **European** | e.g. Mistral (open models), Apertus, Teuken | e.g. Mistral (large models), Aleph Alpha |
+| **Non-European** | e.g. Llama, Qwen, DeepSeek, GLM, Gemma, gpt-oss, Kimi | e.g. GPT, Claude, Gemini |
 
 This list is a starting point. Any model someone wants to test is welcome.
 
@@ -26,11 +26,15 @@ This list is a starting point. Any model someone wants to test is welcome.
 
 Use whatever accounts you have. Free tiers are fine for the tasks here, because we only use public data.
 
-A suggested baseline so results stay comparable (one per field of the table):
+For the general tasks, we recommend these five setups so results stay comparable:
 
-- **Closed, non-European:** Claude, GPT, Gemini (free web chat or free API tiers where available)
-- **Closed or open, European:** Mistral (Le Chat, or the Mistral API)
-- **Open, run locally:** e.g. Qwen, Llama, Mistral Small or a DeepSeek distill via Ollama or LM Studio, sized to fit your laptop
+- **Claude** (Claude Code or chat)
+- **GPT** (Codex or ChatGPT)
+- **Qwen** (Qwen Code)
+- **Mistral** (Le Chat)
+- **A small local model** via Ollama (e.g. gpt-oss-20b or a small Qwen)
+
+Compare at least two setups per task.
 
 Optional: an API router such as [OpenRouter](https://openrouter.ai) gives access to many models with one key. A small prepaid credit is enough for an evening.
 
