@@ -2,6 +2,8 @@
 
 Task: [`tasks/README.md`](../tasks/README.md), task I1. Sample model: "Einfamilienhaus" from the [Bundesingenieurkammer](https://bingk.de/projektbeispiele-bim/). Download it yourself and don't add it to this repository.
 
+Harder variant: "Wohn- und Geschäftshaus" (residential and commercial building) from the same [Bundesingenieurkammer](https://bingk.de/projektbeispiele-bim/) page. Same rule: don't add it to this repository.
+
 ## Chat prompt
 
 Attach the IFC file (or the ZIP file, if your chat accepts it) and paste:
