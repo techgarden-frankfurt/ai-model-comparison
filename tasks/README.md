@@ -22,6 +22,7 @@ Starter prompts for these tasks are in [`prompts/`](../prompts/README.md).
 Take a public IFC model (e.g. a sample file from buildingSMART or the IfcOpenShell test files) and ask the model to analyze it: Which storeys, rooms and components are there? How many doors and windows? What is the total floor area? Let the model write and run a small script if needed (e.g. with IfcOpenShell in Python).
 **What to look for:** Are the counts and areas correct? Does it understand the structure of the model, or does it make things up?
 **Sample models:** The German Federal Chamber of Engineers (Bundesingenieurkammer) offers real IFC models from five projects for download, from a single-family house to a high-rise: [BIM project examples](https://bingk.de/projektbeispiele-bim/). You can view them in a browser at [ifcviewer.de](https://www.ifcviewer.de/). Please link to the models instead of adding them to this repository.
+**Harder variant (suggested by Mr. Hanf):** the "Wohn- und Geschäftshaus" (residential and commercial building) from the [Bundesingenieurkammer](https://bingk.de/projektbeispiele-bim/). Try Way B first: run the existing scripts from `results/2026-11-11_narges_task-I1/` on it, no AI needed. Do they still work, and do they all give the same counts? Then let a model fix what breaks, and note which harness needed how many attempts.
 
 ### I2 · Automated model checking with AI (BIM / IDS)
 *Industry task · Hanf Advanced Fire Engineering GmbH*
