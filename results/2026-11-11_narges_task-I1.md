@@ -53,7 +53,7 @@ IFC2X3 export from Autodesk Revit 2023, no rooms, so question 4 can't be answere
 
 **Storeys:** 10 `IfcBuildingStorey` with stored elevations: 00_Fundamente −2.611, 00_Kellergeschoss −2.319, 01_Erdgeschoss +0.381, window sill lvl +1.971, 02_Obergeschoss +3.571, 03_Dachgeschoss +6.451, 00-DD2 +7.250, 00-DD1 +8.446, 04_Spitzboden +8.851, 05_Dachfirst +11.151. The stored elevations don't match the names: most are offset by about +0.38 m, the foundation by about +0.89 m, the Spitzboden by about −0.45 m. "window sill lvl", "00-DD1" and "00-DD2" look like auxiliary levels but contain members.
 
-**Doors:** 49, all fill openings in walls. **Windows:** 57, of which 54 fill openings; 3 have no opening and are assigned to "00_Fundamente", which looks like a modelling quirk.
+**Doors:** 49, all fill openings in walls. **Windows:** 57, of which 54 fill openings; 3 have no opening and are assigned to "00_Fundamente", which looks like a modeling quirk.
 
 **Other elements:** `IfcWallStandardCase` 173; `IfcWall` 19; `IfcMember` 187 (17 part of stairs); `IfcBeam` 49; `IfcSlab` 26 (11 part of roofs, 15 standalone); `IfcStair` 28 (8 nested, 20 top-level); `IfcStairFlight` 12; `IfcRoof` 14; `IfcRailing` 12 (8 part of stairs, 4 standalone); `IfcColumn` 8; `IfcBuildingElementProxy` 9 (7 "Mass", 2 "RPC Shrub"); `IfcFurnishingElement` 2; `IfcOpeningElement` 124. No coverings, plates, curtain walls, ramps or MEP elements.
 
