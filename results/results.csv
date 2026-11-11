@@ -2,4 +2,5 @@ date,who,task,model,harness,version,origin,data_location,open_closed,access,qual
 2026-11-11,Narges,I1,Qwen Max 4 Preview,chat,preview,CN,CN,open,chat,4,,0,All counts match the others; free plan; .ifc not accepted for upload
 2026-11-11,Narges,I1,Claude Opus 5.5,chat,5.5,US,US,closed,chat,5,,,All counts match; found elevation offsets and 3 windows without openings
 2026-11-11,Narges,I1,GPT-6.1 Sol,chat,6.1,US,US,closed,chat,4,,,All counts match; few extra findings
+2026-11-11,Narges,I1,GPT-6,codex,6 (exact build unavailable),US,US,closed,subscription,,,,Way B; script ran on first try; 10 storeys; 49 doors; 57 windows; 537 other building elements; 0 IfcSpace; room floor area unavailable; script ran locally with IfcOpenShell 0.9.0
 2026-11-11,Narges,I1,Claude Opus 5.5,claude-code,5.5,US,US,closed,subscription,,,,Script failed on first run (by_type returns a tuple in IfcOpenShell 0.9) and ran after one fix; 10 storeys; 49 doors; 57 windows; no IfcSpace
