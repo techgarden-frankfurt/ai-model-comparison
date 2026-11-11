@@ -73,6 +73,38 @@ Read `Einfamilienhaus.ifc` directly from inside the ZIP.
 
 Follow-up question about cost, GPT's answer in short: it can't see token counts or costs for a chat request. The IFC file was evaluated with Python, so the model context held the tool output, not the whole file. For a fair cost comparison, use the API's `usage` data and count all model and tool calls.
 
+## Lesson learned: one folder per agent
+
+I ran Claude Code, Codex and Qwen Code on the same repo at the same time, each on its own branch. A branch is not a folder: one folder can only have one branch checked out. When Codex switched the folder to `i1-codex`, the other agents saw that branch and Codex's uncommitted script. Claude Code noticed and created its own `git worktree`; otherwise one agent's files could have ended up in another agent's commit.
+
+Rule for running agents in parallel: give each agent its own folder.
+
+```bash
+git worktree add ../ai-model-comparison-qwen -b i1-qwen-code main
+cd ../ai-model-comparison-qwen
+```
+
+Remove it after merging with `git worktree remove ../ai-model-comparison-qwen`.
+
+## Local run: Qwen Code with qwen3:8b on a laptop
+
+- **Setup:** Qwen Code 0.27.2, model `qwen3:8b` via Ollama, laptop with AMD CPU, no NVIDIA GPU, 30 GB RAM. Nothing left the laptop (`data_location` local).
+- **Load while running (`free -h`):** 25 GB of 30 GB RAM used, 4.2 GB available, 5.7 GB of 8 GB swap in use. The laptop became noticeably slow.
+- **Context size matters:** Ollama started the model with a 4,096-token context, too small for Qwen Code's system prompt plus files (Ollama cuts silently from the front). Fix: a variant with `PARAMETER num_ctx 16384` (`ollama create qwen3-8b-16k`). Memory for the model went from 5.9 GB to 7.9 GB.
+- **Duration:** about 50 minutes, then it stopped with an error. No result.
+- **Did it act as an agent?** No. Six thinking rounds of 3.5 to 7 minutes each (qwen3's thinking mode on a CPU). One tool call, and it was malformed: the model wanted to search for `qwen-code.py` but left out the tool name, so Qwen Code refused it (`params must have required property 'name'`). In the end the harness gave up: `API Error: No stream activity for 240000ms`. The branch was never created, no script was written.
+- **Counts match the chat results?** No counts produced.
+- **Harness and runtime disagree:** Qwen Code's status bar showed a 262.1k context, while Ollama actually served 16k. The harness assumes the model's maximum; the runtime decides what is really available.
+- **Not tried:** putting `/no_think` as the first line of the prompt would switch off qwen3's thinking mode and might make it faster. An idea for anyone who wants to try.
+
+Takeaway: a local model is free and keeps the data on the machine, but on a normal laptop without a GPU it takes most of the memory and is slow. With a small 8B model, an agent harness like Qwen Code did not complete a single step in 50 minutes; the same task took the cloud agents minutes. For real use you need suitable hardware and a larger model.
+
+Row for `results.csv` (adapt to the column order):
+
+```
+2026-11-11,Narges,I1,qwen3:8b,Qwen Code 0.27.2,8b,CN,local,open,free,1,,0,Ollama num_ctx 16384; laptop without GPU; 50 min, no step done; 1 malformed tool call; stream timeout after 240 s
+```
+
 ## Open questions for Mr. Hanf
 
 - Which counts are correct? (A reference script with IfcOpenShell would confirm them.)

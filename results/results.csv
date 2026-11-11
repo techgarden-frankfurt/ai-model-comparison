@@ -2,3 +2,4 @@ date,who,task,model,harness,version,origin,data_location,open_closed,access,qual
 2026-11-11,Narges,I1,Qwen Max 4 Preview,chat,preview,CN,CN,open,chat,4,,0,All counts match the others; free plan; .ifc not accepted for upload
 2026-11-11,Narges,I1,Claude Opus 5.5,chat,5.5,US,US,closed,chat,5,,,All counts match; found elevation offsets and 3 windows without openings
 2026-11-11,Narges,I1,GPT-6.1 Sol,chat,6.1,US,US,closed,chat,4,,,All counts match; few extra findings
+2026-11-11,Narges,I1,qwen3:8b,qwen-code,8b,CN,local,open,local,1,,0,Qwen Code 0.27.2 via Ollama; num_ctx 16384; laptop without GPU; 50 min; no step done; 1 malformed tool call; stream timeout after 240 s
