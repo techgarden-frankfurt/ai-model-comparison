@@ -1,6 +1,6 @@
-# 09 · Automated model checking with AI (BIM / IDS)
+# I2 · Automated model checking with AI (BIM / IDS)
 
-Task: [`tasks/README.md`](../tasks/README.md), task 09. Sample model: "Einfamilienhaus" from the [Bundesingenieurkammer](https://bingk.de/projektbeispiele-bim/). Download it yourself and don't add it to this repository.
+Task: [`tasks/README.md`](../tasks/README.md), task I2. Sample model: "Einfamilienhaus" from the [Bundesingenieurkammer](https://bingk.de/projektbeispiele-bim/). Download it yourself and don't add it to this repository.
 
 ## Chat prompt
 
@@ -39,4 +39,4 @@ Show me the output after each step. Check how many elements each rule actually a
 
 ## What to note in results.csv
 
-Task `09`, the model and harness, `data_location`, whether the IDS was valid on the first try (or how many corrections it took), and in `notes` any invented property set names or differences between the summary and the real report.
+Task `I2`, the model and harness, `data_location`, whether the IDS was valid on the first try (or how many corrections it took), and in `notes` any invented property set names or differences between the summary and the real report.

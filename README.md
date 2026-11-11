@@ -49,7 +49,7 @@ Free tiers may use your inputs to improve the provider's models. That's another 
   - [Claude Code](https://claude.com/claude-code) (needs a Claude account).
   - [Qwen Code](https://github.com/QwenLM/qwen-code): needs Node.js 22 or later. Install it with `npm install -g @qwen-code/qwen-code@latest` and start it with `qwen`. The free Qwen sign-in tier was discontinued in April 2026, so you need either an API key from an OpenAI-compatible provider (e.g. Alibaba Cloud) or a local model via Ollama (`baseUrl` `http://localhost:11434/v1`). Set it up with `qwen auth`.
   - [Ollama](https://ollama.com) for local models: `ollama run qwen3:8b`. The download is several gigabytes, so do it at home.
-- **For tasks 08 and 09:** Python 3 and `pip install ifcopenshell ifctester` (optional).
+- **For tasks I1 and I2:** Python 3 and `pip install ifcopenshell ifctester` (optional).
 - Bring your laptop and charger. Never put API keys in the repository.
 
 ## How to contribute
@@ -57,7 +57,7 @@ Free tiers may use your inputs to improve the provider's models. That's another 
 1. Pick a task from [`tasks/`](tasks/) or bring your own.
 2. Give the same task to two or more models.
 3. Add your results to [`results/results.csv`](results/results.csv), one row per model, harness and task.
-4. Put longer answers, scripts or notes in their own file in `results/`, for example `results/2026-11-12_your-name_task-01.md`.
+4. Put longer answers, scripts or notes in their own file in `results/`, for example `results/2026-11-12_your-name_task-G1.md`.
 5. Open a pull request, and you're done.
 
 You can try the models in a browser chat, through an API or locally, for example with [Ollama](https://ollama.com) or [LM Studio](https://lmstudio.ai).

@@ -6,27 +6,25 @@ A few starter tasks. Give each task to several models as literally as possible, 
 
 Start here if you can. Mr. Hanf, founder of Hanf Advanced Fire Engineering, is on site to answer questions about these tasks. Strong solutions may lead to a follow-up.
 
+**About BIM:** BIM (Building Information Modeling) is a way of working, not a file format. The open exchange format is IFC, and checking rules are described in IDS. There are no project files from the sponsor. We only work with public sample models, e.g. the single-family house ("Einfamilienhaus") from the [Bundesingenieurkammer](https://bingk.de/projektbeispiele-bim/). Public data only, nothing from real projects.
+
 ### Two ways to handle confidential data
 
-- **Way A:** A local model processes the real data on your own hardware. This fits fuzzy work like sorting emails (task 10).
-- **Way B:** AI writes a program using sample data, and the program then runs on the real data without AI. This fits rules like IDS checks and BIM analysis (tasks 08 and 09).
+- **Way A:** A local model processes the real data on your own hardware. This fits fuzzy work like sorting emails (task I3).
+- **Way B:** AI writes a program using sample data, and the program then runs on the real data without AI. This fits rules like IDS checks and BIM analysis (tasks I1 and I2).
 
 Note which way you took in the `notes` column of `results/results.csv`.
 
 Starter prompts for these tasks are in [`prompts/`](../prompts/README.md).
 
-### 08 · Read and analyze a BIM file
+### I1 · Read and analyze a BIM file
 *Industry task · Hanf Advanced Fire Engineering GmbH*
-**About BIM:** BIM (Building Information Modeling) is a way of working, not a file format. The open exchange format is IFC, and checking rules are described in IDS. There are no project files from the sponsor. We only work with public sample models, e.g. the single-family house ("Einfamilienhaus") from the [Bundesingenieurkammer](https://bingk.de/projektbeispiele-bim/). Public data only, nothing from real projects.
-
 Take a public IFC model (e.g. a sample file from buildingSMART or the IfcOpenShell test files) and ask the model to analyze it: Which storeys, rooms and components are there? How many doors and windows? What is the total floor area? Let the model write and run a small script if needed (e.g. with IfcOpenShell in Python).
 **What to look for:** Are the counts and areas correct? Does it understand the structure of the model, or does it make things up?
 **Sample models:** The German Federal Chamber of Engineers (Bundesingenieurkammer) offers real IFC models from five projects for download, from a single-family house to a high-rise: [BIM project examples](https://bingk.de/projektbeispiele-bim/). You can view them in a browser at [ifcviewer.de](https://www.ifcviewer.de/). Please link to the models instead of adding them to this repository.
 
-### 09 · Automated model checking with AI (BIM / IDS)
+### I2 · Automated model checking with AI (BIM / IDS)
 *Industry task · Hanf Advanced Fire Engineering GmbH*
-**About BIM:** BIM (Building Information Modeling) is a way of working, not a file format. The open exchange format is IFC, and checking rules are described in IDS. There are no project files from the sponsor. We only work with public sample models, e.g. the single-family house ("Einfamilienhaus") from the [Bundesingenieurkammer](https://bingk.de/projektbeispiele-bim/). Public data only, nothing from real projects.
-
 Build a small, repeatable workflow that checks an IFC model against rules automatically, with an AI model helping at each step. Then compare which AI model and harness helps best. The real task is to phrase the requirements clearly enough that an AI can turn them into a working check.
 
 **Input:** The public IFC model "Einfamilienhaus" from the [Bundesingenieurkammer](https://bingk.de/projektbeispiele-bim/) (please link to it, don't add the file to this repository), and these example rules:
@@ -60,7 +58,7 @@ Build a small, repeatable workflow that checks an IFC model against rules automa
 - Enterprise harnesses such as Microsoft 365 Copilot run inside the company's own tenant under its agreements with the provider. They can help write IDS files and scripts, but the check itself still runs locally with ifctester.
 - Alternative: an open model running locally or on the company's own server, so no model data leaves the company.
 
-### 10 · Sort emails into the right project folder
+### I3 · Sort emails into the right project folder
 *Industry task · Hanf Advanced Fire Engineering GmbH*
 Create a handful of made-up incoming and outgoing emails for three or four fictional projects, some with attachments. Ask the model to assign each email to the right project folder, store the attachments there and build a simple index (date, sender, subject, project, attachment names). A local folder structure is enough to simulate SharePoint.
 **What to look for:** Does every email land in the right project? What does the model do with ambiguous emails? Is the index complete and searchable?
@@ -68,30 +66,30 @@ Create a handful of made-up incoming and outgoing emails for three or four ficti
 
 ## General tasks
 
-### 01 · Summarize a German technical text
+### G1 · Summarize a German technical text
 Take a public German technical text (e.g. a data sheet, a summary of a standard, a Wikipedia article) and ask the model for a five-sentence summary.
 **What to look for:** Are the facts right? Is anything important missing? Is anything made up?
 
-### 02 · Read a table from a PDF
+### G2 · Read a table from a PDF
 Give the model a public PDF page containing a table and ask for a specific value.
 **What to look for:** Does it find the right row and column? Also for tables spanning two pages?
 
-### 03 · Question with a source
+### G3 · Question with a source
 Ask something that is covered in the text you provide, and require the passage as evidence.
 **What to look for:** Does it cite a real passage or make one up?
 
-### 04 · "I don't know"
+### G4 · "I don't know"
 Ask something that is **not** covered in the text you provide.
 **What to look for:** Does the model honestly say it can't find the answer, or does it guess?
 
-### 05 · Write code
+### G5 · Write code
 Have it write a small function, e.g. in Python or Rust: read a CSV file and calculate the average of a column.
 **What to look for:** Does the code run on the first try? Are error cases handled?
 
-### 06 · Translate
+### G6 · Translate
 Translate a short German technical paragraph into English and back.
 **What to look for:** Do technical terms stay correct? Is any meaning lost?
 
-### 07 · Sensitive topics
+### G7 · Sensitive topics
 Ask models from different countries the same factual question about a politically or historically sensitive topic.
 **What to look for:** Does the model answer factually, dodge the question or refuse?

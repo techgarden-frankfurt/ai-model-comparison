@@ -1,2 +1,2 @@
 date,who,task,model,harness,version,origin,data_location,open_closed,access,quality_1_to_5,response_time_s,cost_eur,notes
-2026-11-12,Example,01,Model name,chat/api/claude-code/cursor/ollama/...,Version or date,EU/US/CN/other,local/EU/US/other,open/closed,Chat/API/local,4,3.2,0.002,Example row – please delete after the first entry
+2026-11-12,Example,G1,Model name,chat/api/claude-code/cursor/ollama/...,Version or date,EU/US/CN/other,local/EU/US/other,open/closed,Chat/API/local,4,3.2,0.002,Example row – please delete after the first entry

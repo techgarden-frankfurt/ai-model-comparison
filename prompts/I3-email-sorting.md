@@ -1,6 +1,6 @@
-# 10 · Sort emails into the right project folder
+# I3 · Sort emails into the right project folder
 
-Task: [`tasks/README.md`](../tasks/README.md), task 10.
+Task: [`tasks/README.md`](../tasks/README.md), task I3.
 
 **Use made-up emails only, never real ones.** No real names, companies or projects.
 
@@ -28,4 +28,4 @@ Run the script and show me the folder structure and the index.
 
 ## What to note in results.csv
 
-Task `10`, the model and harness, `data_location`, how many emails landed in the right project, and in `notes` how the model handled the ambiguous emails.
+Task `I3`, the model and harness, `data_location`, how many emails landed in the right project, and in `notes` how the model handled the ambiguous emails.
