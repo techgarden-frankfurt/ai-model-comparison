@@ -29,7 +29,7 @@ Not yet checked by an expert or a reference script.
 | Proxies / furnishing | 9 / 2 | 9 / 2 | 9 / 2 |
 | Rooms (`IfcSpace`) | 0, area not determinable | 0, area not determinable | 0, area not determinable ("should not be reported as zero") |
 | How it read the file | Python in a sandbox | Python, read directly | Python, "evaluated locally" (in the provider's sandbox) |
-| Extra findings | Slab types; member types (129 timber beams 60×100); Revit export artefact with doubled stairs; roofs and roof slabs overlap | Stored elevations don't match the names (offset of about +0.38 m); 3 windows without an opening on the foundation level; how to re-export with rooms | Few: read the file from inside the ZIP; counts exclude type definitions; no detail on stairs, slabs or elevations |
+| Extra findings | Slab types; member types (129 timber beams 60×100); Revit export artifact with doubled stairs; roofs and roof slabs overlap | Stored elevations don't match the names (offset of about +0.38 m); 3 windows without an opening on the foundation level; how to re-export with rooms | Few: read the file from inside the ZIP; counts exclude type definitions; no detail on stairs, slabs or elevations |
 | Made-up or unclear? | Nothing obvious | Nothing obvious | Nothing obvious |
 | data_location | CN | US | US |
 
@@ -43,7 +43,7 @@ The file is a full IFC2X3 STEP file, exported from Autodesk Revit 2023, 83,183 e
 
 **Doors:** 49 (all with unique tags). **Windows:** 57 (including "roof_win .6x.9" roof windows).
 
-**Other elements:** `IfcWallStandardCase` 173, `IfcWall` 19 (192 walls); `IfcSlab` 26 (13 floor, 11 roof, 2 base slab); `IfcRoof` 14 (containers; the 11 roof slabs are aggregated into them, 3 roofs have no children, so don't add roofs and roof slabs); `IfcMember` 187 (mostly timber "Holz Träger 60x100", 129×); `IfcBeam` 49; `IfcColumn` 8 (6 timber, 2 concrete 475×610 mm); `IfcStair` 28 entities = 20 distinct stairs (8 exported twice as container plus geometry child, a Revit export artefact); `IfcStairFlight` 12; `IfcRailing` 12; `IfcOpeningElement` 124 (voids, not physical); `IfcBuildingElementProxy` 9 (7 "Mass" objects, 2 RPC shrubs); `IfcFurnishingElement` 2. No footings, plates, coverings, curtain walls or ramps.
+**Other elements:** `IfcWallStandardCase` 173, `IfcWall` 19 (192 walls); `IfcSlab` 26 (13 floor, 11 roof, 2 base slab); `IfcRoof` 14 (containers; the 11 roof slabs are aggregated into them, 3 roofs have no children, so don't add roofs and roof slabs); `IfcMember` 187 (mostly timber "Holz Träger 60x100", 129×); `IfcBeam` 49; `IfcColumn` 8 (6 timber, 2 concrete 475×610 mm); `IfcStair` 28 entities = 20 distinct stairs (8 exported twice as container plus geometry child, a Revit export artifact); `IfcStairFlight` 12; `IfcRailing` 12; `IfcOpeningElement` 124 (voids, not physical); `IfcBuildingElementProxy` 9 (7 "Mass" objects, 2 RPC shrubs); `IfcFurnishingElement` 2. No footings, plates, coverings, curtain walls or ramps.
 
 **Rooms:** 0 `IfcSpace`, no space boundaries, no base quantities, no floor area properties. The total floor area can't be determined. The only area values are roof areas in `Pset_RoofCommon`.
 
