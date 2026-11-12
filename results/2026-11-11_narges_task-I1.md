@@ -8,7 +8,7 @@
 
 ## Summary
 
-All three models agree on every count. Both say there are no rooms (`IfcSpace`), so the floor area can't be determined. They differ in the extra details: Claude and Qwen add useful observations, GPT sticks to the counts. None of them read the file "by eye": they ran Python in the provider's sandbox and answered from the script output. That is Way B inside a chat, but the data was processed on the provider's servers.
+All three models agree on every count. All three say there are no rooms (`IfcSpace`), so the floor area can't be determined. They differ in the extra details: Claude and Qwen add useful observations, GPT sticks to the counts. None of them read the file "by eye": they ran Python in the provider's sandbox and answered from the script output. That is Way B inside a chat, but the data was processed on the provider's servers.
 
 Not yet checked by an expert. Two reference scripts with IfcOpenShell (see "How to run the scripts") confirm the main counts: 10 storeys, 49 doors, 57 windows, 537 other building elements, no `IfcSpace`.
 
