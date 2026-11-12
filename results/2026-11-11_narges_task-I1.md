@@ -8,9 +8,22 @@
 
 ## Summary
 
-All three models agree on every count. Both say there are no rooms (`IfcSpace`), so the floor area can't be determined. They differ in the extra details: Claude and Qwen add useful observations, GPT sticks to the counts. None of them read the file "by eye": they ran Python in the provider's sandbox and answered from the script output. That is Way B inside a chat, but the data was processed on the provider's servers.
+All three models agree on every count. All three say there are no rooms (`IfcSpace`), so the floor area can't be determined. They differ in the extra details: Claude and Qwen add useful observations, GPT sticks to the counts. None of them read the file "by eye": they ran Python in the provider's sandbox and answered from the script output. That is Way B inside a chat, but the data was processed on the provider's servers.
 
-Not yet checked by an expert or a reference script.
+Not yet checked by an expert. Two reference scripts with IfcOpenShell (see "How to run the scripts") confirm the main counts: 10 storeys, 49 doors, 57 windows, 537 other building elements, no `IfcSpace`.
+
+## How to run the scripts
+
+The scripts in `results/2026-11-11_narges_task-I1/` need no AI. They run on any IFC file.
+
+1. Python 3 and IfcOpenShell: `pip install ifcopenshell`
+   (If you see "No module named ifcopenshell", this step is missing.)
+2. Download the "Einfamilienhaus" from the [Bundesingenieurkammer](https://bingk.de/projektbeispiele-bim/) and unzip it. Do not add the model to the repo.
+3. Run one of the scripts with the path to the .ifc file:
+   - `python results/2026-11-11_narges_task-I1/claude-code.py path/to/Einfamilienhaus.ifc`
+   - `python results/2026-11-11_narges_task-I1/codex.py path/to/Einfamilienhaus.ifc`
+
+Both should report 10 storeys, 49 doors and 57 windows.
 
 ## Comparison
 
