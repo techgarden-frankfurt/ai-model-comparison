@@ -12,6 +12,19 @@ All three models agree on every count. Both say there are no rooms (`IfcSpace`),
 
 Not yet checked by an expert or a reference script.
 
+## How to run the scripts
+
+The scripts in `results/2026-11-11_narges_task-I1/` need no AI. They run on any IFC file.
+
+1. Python 3 and IfcOpenShell: `pip install ifcopenshell`
+   (If you see "No module named ifcopenshell", this step is missing.)
+2. Download the "Einfamilienhaus" from the [Bundesingenieurkammer](https://bingk.de/projektbeispiele-bim/) and unzip it. Do not add the model to the repo.
+3. Run one of the scripts with the path to the .ifc file:
+   - `python results/2026-11-11_narges_task-I1/claude-code.py path/to/Einfamilienhaus.ifc`
+   - `python results/2026-11-11_narges_task-I1/codex.py path/to/Einfamilienhaus.ifc`
+
+Both should report 10 storeys, 49 doors and 57 windows.
+
 ## Comparison
 
 | | Qwen Max 4 Preview | Claude Opus 5.5 | GPT-6.1 Sol |
